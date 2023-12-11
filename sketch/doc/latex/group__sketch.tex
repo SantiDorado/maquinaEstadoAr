@@ -1,0 +1,226 @@
+\doxysection{Sketch}
+\hypertarget{group__sketch}{}\label{group__sketch}\index{Sketch@{Sketch}}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{group__sketch_ga5d74787dedbc4e11c1ab15bf487e61f8}\label{group__sketch_ga5d74787dedbc4e11c1ab15bf487e61f8} 
+enum {\bfseries State} \{ \newline
+{\bfseries INIT} = 0
+, {\bfseries BLOQUEO} = 1
+, {\bfseries MONITOR\+\_\+\+LUZ} = 2
+, {\bfseries ALERTA} = 3
+, \newline
+{\bfseries MONITOR\+\_\+\+TEMP} = 4
+, {\bfseries ALARMA} = 5
+ \}
+\item 
+\Hypertarget{group__sketch_ga080a822f0093973313bd644e517a5090}\label{group__sketch_ga080a822f0093973313bd644e517a5090} 
+enum {\bfseries Input} \{ \newline
+{\bfseries CORRECTO} = 0
+, {\bfseries BLOQUEADO} = 1
+, {\bfseries TIME\+\_\+\+OUT} = 2
+, {\bfseries LUZ} = 3
+, \newline
+{\bfseries TEMP} = 4
+, {\bfseries Unknown} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{group__sketch_ga9e9cdeb62c75e16ac53f35529b9fc759}{Escribir}} ()
+\item 
+\Hypertarget{group__sketch_gaf97afdf00af0e116e9b5957f6a470fc2}\label{group__sketch_gaf97afdf00af0e116e9b5957f6a470fc2} 
+Liquid\+Crystal {\bfseries lcd} (12, 11, 5, 4, 3, 2)
+\item 
+void \mbox{\hyperlink{group__sketch_ga2c018b07f320da4371811bb498b61a82}{seguridad}} ()
+\item 
+\Hypertarget{group__sketch_gac01b1584e3b8e0424423863870baab4b}\label{group__sketch_gac01b1584e3b8e0424423863870baab4b} 
+Async\+Task {\bfseries async\+Task\+Seguridad} (0, \mbox{\hyperlink{group__sketch_ga2c018b07f320da4371811bb498b61a82}{seguridad}})
+\item 
+void \mbox{\hyperlink{group__sketch_gaae8cb957f1db9a84e5b89500d634fc09}{monitor\+Lu}} ()
+\item 
+\Hypertarget{group__sketch_ga52a75b3d4a78e628a7a46bc11e02cf6f}\label{group__sketch_ga52a75b3d4a78e628a7a46bc11e02cf6f} 
+Async\+Task {\bfseries async\+Task2\+Monitor\+Lu} (0, true, \mbox{\hyperlink{group__sketch_gaae8cb957f1db9a84e5b89500d634fc09}{monitor\+Lu}})
+\item 
+void \mbox{\hyperlink{group__sketch_ga33677be46e4716eacd91dd5bfcce7d14}{alerta}} ()
+\item 
+\Hypertarget{group__sketch_ga66948b197a8aa43f01820b1f7c41727a}\label{group__sketch_ga66948b197a8aa43f01820b1f7c41727a} 
+Async\+Task {\bfseries async\+Task3\+Alerta} (0, true, \mbox{\hyperlink{group__sketch_ga33677be46e4716eacd91dd5bfcce7d14}{alerta}})
+\item 
+void \mbox{\hyperlink{group__sketch_gae4a7a64a89cc76039ba0f4d7597e54a0}{temperatura}} ()
+\item 
+\Hypertarget{group__sketch_gaae288b36e5264fb4a2190db7f5d6e439}\label{group__sketch_gaae288b36e5264fb4a2190db7f5d6e439} 
+Async\+Task {\bfseries async\+Task4\+Temperatura} (500, true, \mbox{\hyperlink{group__sketch_gae4a7a64a89cc76039ba0f4d7597e54a0}{temperatura}})
+\item 
+void \mbox{\hyperlink{group__sketch_gad9ee76c563085f0c7551b4f5af30adf8}{alarma}} ()
+\item 
+\Hypertarget{group__sketch_gae34ca1ff92e3f9753ba6be43b9354284}\label{group__sketch_gae34ca1ff92e3f9753ba6be43b9354284} 
+Async\+Task {\bfseries async\+Task4\+Alarma} (0, true, \mbox{\hyperlink{group__sketch_gad9ee76c563085f0c7551b4f5af30adf8}{alarma}})
+\item 
+void \mbox{\hyperlink{group__sketch_gad35c525da6d7cf12e69e02798276e1bf}{timeout\+T3}} ()
+\item 
+\Hypertarget{group__sketch_ga75814f035c1cbdca6ceffba1da31dc5f}\label{group__sketch_ga75814f035c1cbdca6ceffba1da31dc5f} 
+Async\+Task {\bfseries async\+Task\+Time3} (3000, \mbox{\hyperlink{group__sketch_gad35c525da6d7cf12e69e02798276e1bf}{timeout\+T3}})
+\item 
+void \mbox{\hyperlink{group__sketch_ga4f5f1a1139f0bb4b3686af51a91119ae}{timeout\+T4}} ()
+\item 
+\Hypertarget{group__sketch_ga19041cc40eb84bcc77d6201bbd6d58a1}\label{group__sketch_ga19041cc40eb84bcc77d6201bbd6d58a1} 
+Async\+Task {\bfseries async\+Task\+Time4} (4000, \mbox{\hyperlink{group__sketch_ga4f5f1a1139f0bb4b3686af51a91119ae}{timeout\+T4}})
+\item 
+void \mbox{\hyperlink{group__sketch_ga18f26313c87ac04379d2d720d4ef4d71}{timeout\+T5}} ()
+\item 
+\Hypertarget{group__sketch_ga5717a5b80d0dd9e0456128eaf3a12512}\label{group__sketch_ga5717a5b80d0dd9e0456128eaf3a12512} 
+Async\+Task {\bfseries async\+Task\+Time5} (5000, \mbox{\hyperlink{group__sketch_ga18f26313c87ac04379d2d720d4ef4d71}{timeout\+T5}})
+\item 
+void \mbox{\hyperlink{group__sketch_gac3f4f7ace22c6985a2de01bcd0393da2}{timeout\+T6}} ()
+\item 
+\Hypertarget{group__sketch_ga1abfa8ad0ade16013678000b60e3b630}\label{group__sketch_ga1abfa8ad0ade16013678000b60e3b630} 
+Async\+Task {\bfseries async\+Task\+Time6} (6000, \mbox{\hyperlink{group__sketch_gac3f4f7ace22c6985a2de01bcd0393da2}{timeout\+T6}})
+\item 
+\Hypertarget{group__sketch_gadb94720ceea460036bd1711988e40c31}\label{group__sketch_gadb94720ceea460036bd1711988e40c31} 
+State\+Machine {\bfseries state\+Machine} (6, 9)
+\item 
+\Hypertarget{group__sketch_ga4fc01d736fe50cf5b977f755b675f11d}\label{group__sketch_ga4fc01d736fe50cf5b977f755b675f11d} 
+void {\bfseries setup} ()
+\item 
+\Hypertarget{group__sketch_gafe461d27b9c48d5921c00d521181f12f}\label{group__sketch_gafe461d27b9c48d5921c00d521181f12f} 
+void {\bfseries loop} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{group__sketch_ga4e87f62250e013bf49658459cdf23e55}\label{group__sketch_ga4e87f62250e013bf49658459cdf23e55} 
+const String {\bfseries password} = "{}1805"{}
+\item 
+\Hypertarget{group__sketch_ga8e1de2175d8aeda26c2b0725b91632a8}\label{group__sketch_ga8e1de2175d8aeda26c2b0725b91632a8} 
+int {\bfseries attempts} = 0
+\item 
+\Hypertarget{group__sketch_ga640f93dbb6516d9404161a09b938101e}\label{group__sketch_ga640f93dbb6516d9404161a09b938101e} 
+int {\bfseries buzzer} = 7
+\item 
+\Hypertarget{group__sketch_ga516115750e956e7c851392eeb95d7dcb}\label{group__sketch_ga516115750e956e7c851392eeb95d7dcb} 
+int {\bfseries tempo} = 140
+\item 
+\Hypertarget{group__sketch_gad3d0b408286a3b48d533bbef1053a758}\label{group__sketch_gad3d0b408286a3b48d533bbef1053a758} 
+int {\bfseries wholenote} = (60000 \texorpdfstring{$\ast$}{*} 4) / tempo
+\item 
+\Hypertarget{group__sketch_ga31dfb8bfd435dc08041263388c814c63}\label{group__sketch_ga31dfb8bfd435dc08041263388c814c63} 
+int {\bfseries divider} = 0
+\item 
+\Hypertarget{group__sketch_gac9a1737389d5b575de5389627b2c18b8}\label{group__sketch_gac9a1737389d5b575de5389627b2c18b8} 
+int {\bfseries note\+Duration} = 0
+\item 
+int \mbox{\hyperlink{group__sketch_gaa7afc895bd611d7904ae7dab9cb3892f}{melodia}} \mbox{[}$\,$\mbox{]}
+\item 
+\Hypertarget{group__sketch_ga7dbd379c73b20ded52adb099da250071}\label{group__sketch_ga7dbd379c73b20ded52adb099da250071} 
+int {\bfseries notes} = sizeof(melodia) / sizeof(melodia\mbox{[}0\mbox{]}) / 2
+\item 
+char \mbox{\hyperlink{group__sketch_ga856e873a1d14012d57ddb813c4a1e40a}{keys}} \mbox{[}ROWS\mbox{]}\mbox{[}COLS\mbox{]}
+\item 
+\Hypertarget{group__sketch_ga0e6c3cc7e8c762ab0ca1fa2296d7bbfe}\label{group__sketch_ga0e6c3cc7e8c762ab0ca1fa2296d7bbfe} 
+Keypad {\bfseries keypad} = Keypad(make\+Keymap(keys), row\+Pins, col\+Pins, ROWS, COLS)
+\item 
+\Hypertarget{group__sketch_ga0563e10870312b52f7f25cfddf778db0}\label{group__sketch_ga0563e10870312b52f7f25cfddf778db0} 
+Input {\bfseries current\+Input}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__sketch_gad9ee76c563085f0c7551b4f5af30adf8}\label{group__sketch_gad9ee76c563085f0c7551b4f5af30adf8} 
+\index{Sketch@{Sketch}!alarma@{alarma}}
+\index{alarma@{alarma}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{alarma()}{alarma()}}
+{\footnotesize\ttfamily void alarma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion alarma para iniciar la alarma \Hypertarget{group__sketch_ga33677be46e4716eacd91dd5bfcce7d14}\label{group__sketch_ga33677be46e4716eacd91dd5bfcce7d14} 
+\index{Sketch@{Sketch}!alerta@{alerta}}
+\index{alerta@{alerta}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{alerta()}{alerta()}}
+{\footnotesize\ttfamily void alerta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion alerta para mostrar un mensaje de alerta en el LCD \Hypertarget{group__sketch_ga9e9cdeb62c75e16ac53f35529b9fc759}\label{group__sketch_ga9e9cdeb62c75e16ac53f35529b9fc759} 
+\index{Sketch@{Sketch}!Escribir@{Escribir}}
+\index{Escribir@{Escribir}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{Escribir()}{Escribir()}}
+{\footnotesize\ttfamily String Escribir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion Escribir para manejar los datos ingresados para la clave \Hypertarget{group__sketch_gaae8cb957f1db9a84e5b89500d634fc09}\label{group__sketch_gaae8cb957f1db9a84e5b89500d634fc09} 
+\index{Sketch@{Sketch}!monitorLu@{monitorLu}}
+\index{monitorLu@{monitorLu}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{monitorLu()}{monitorLu()}}
+{\footnotesize\ttfamily void monitor\+Lu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion Monitor\+Lu para leer el valor del sensor de luz \Hypertarget{group__sketch_ga2c018b07f320da4371811bb498b61a82}\label{group__sketch_ga2c018b07f320da4371811bb498b61a82} 
+\index{Sketch@{Sketch}!seguridad@{seguridad}}
+\index{seguridad@{seguridad}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{seguridad()}{seguridad()}}
+{\footnotesize\ttfamily void seguridad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion Seguridad para validar la clave \Hypertarget{group__sketch_gae4a7a64a89cc76039ba0f4d7597e54a0}\label{group__sketch_gae4a7a64a89cc76039ba0f4d7597e54a0} 
+\index{Sketch@{Sketch}!temperatura@{temperatura}}
+\index{temperatura@{temperatura}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{temperatura()}{temperatura()}}
+{\footnotesize\ttfamily void temperatura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion alerta para leer el sensor de temperatura \Hypertarget{group__sketch_gad35c525da6d7cf12e69e02798276e1bf}\label{group__sketch_gad35c525da6d7cf12e69e02798276e1bf} 
+\index{Sketch@{Sketch}!timeoutT3@{timeoutT3}}
+\index{timeoutT3@{timeoutT3}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{timeoutT3()}{timeoutT3()}}
+{\footnotesize\ttfamily void timeout\+T3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion timeout\+T3 para salir del estado monitor\+Luz \Hypertarget{group__sketch_ga4f5f1a1139f0bb4b3686af51a91119ae}\label{group__sketch_ga4f5f1a1139f0bb4b3686af51a91119ae} 
+\index{Sketch@{Sketch}!timeoutT4@{timeoutT4}}
+\index{timeoutT4@{timeoutT4}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{timeoutT4()}{timeoutT4()}}
+{\footnotesize\ttfamily void timeout\+T4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion timeout\+T4 para salir del estado alerta \Hypertarget{group__sketch_ga18f26313c87ac04379d2d720d4ef4d71}\label{group__sketch_ga18f26313c87ac04379d2d720d4ef4d71} 
+\index{Sketch@{Sketch}!timeoutT5@{timeoutT5}}
+\index{timeoutT5@{timeoutT5}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{timeoutT5()}{timeoutT5()}}
+{\footnotesize\ttfamily void timeout\+T5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion timeout\+T5 para salir del estado alarma \Hypertarget{group__sketch_gac3f4f7ace22c6985a2de01bcd0393da2}\label{group__sketch_gac3f4f7ace22c6985a2de01bcd0393da2} 
+\index{Sketch@{Sketch}!timeoutT6@{timeoutT6}}
+\index{timeoutT6@{timeoutT6}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{timeoutT6()}{timeoutT6()}}
+{\footnotesize\ttfamily void timeout\+T6 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+brief Funcion timeout\+T6 para salir del estado temperatura 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{group__sketch_ga856e873a1d14012d57ddb813c4a1e40a}\label{group__sketch_ga856e873a1d14012d57ddb813c4a1e40a} 
+\index{Sketch@{Sketch}!keys@{keys}}
+\index{keys@{keys}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily char keys\mbox{[}ROWS\mbox{]}\mbox{[}COLS\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'}\},}
+\DoxyCodeLine{\ \ \ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'}\}\}}
+
+\end{DoxyCode}
+\Hypertarget{group__sketch_gaa7afc895bd611d7904ae7dab9cb3892f}\label{group__sketch_gaa7afc895bd611d7904ae7dab9cb3892f} 
+\index{Sketch@{Sketch}!melodia@{melodia}}
+\index{melodia@{melodia}!Sketch@{Sketch}}
+\doxysubsubsection{\texorpdfstring{melodia}{melodia}}
+{\footnotesize\ttfamily int melodia\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ NOTE\_E7,\ 4,\ NOTE\_E7,\ 4,\ 0,\ 4,\ NOTE\_E7,\ 4,\ 0,\ 4,\ NOTE\_C7,\ 4,}
+\DoxyCodeLine{\ \ \ \ NOTE\_E7,\ 4,\ 0,\ 4,\ NOTE\_G7,\ 4,\ 0,\ 4,\ 0,\ 4,\ NOTE\_G6,\ 4,\ 0,\ 4,}
+\DoxyCodeLine{\ \ \ \ 0,\ 4,\ NOTE\_C7,\ 4,\ 0,\ 4,\ NOTE\_G6,\ 4,\ 0,\ 4,\ 0,\ 4,}
+\DoxyCodeLine{\ \ \ \ NOTE\_E6,\ 4,\ 0,\ 4,\ 0,\ 4,\ NOTE\_A6,\ 4,\ 0,\ 4,\ NOTE\_B6,\ 4,\ 0,\ 4,}
+\DoxyCodeLine{\ \ \ \ NOTE\_AS6,\ 4,\ NOTE\_A6,\ 4,\ 0,\ 4,\ NOTE\_G6,\ 2,\ 0,\ 8\}}
+
+\end{DoxyCode}

@@ -1,0 +1,140 @@
+\doxysection{C\+:/\+Users/\+SANTIAGO DORADO/\+One\+Drive/\+Documentos/\+UNICAUCA/arquitectura/proyecto\+Arquitectura/sketch.ino File Reference}
+\hypertarget{sketch_8ino}{}\label{sketch_8ino}\index{C:/Users/SANTIAGO DORADO/OneDrive/Documentos/UNICAUCA/arquitectura/proyectoArquitectura/sketch.ino@{C:/Users/SANTIAGO DORADO/OneDrive/Documentos/UNICAUCA/arquitectura/proyectoArquitectura/sketch.ino}}
+
+
+ejecucion completa.  
+
+
+{\ttfamily \#include "{}pinout.\+h"{}}\newline
+{\ttfamily \#include "{}State\+Machine\+Lib.\+h"{}}\newline
+{\ttfamily \#include $<$Liquid\+Crystal.\+h$>$}\newline
+{\ttfamily \#include $<$Keypad.\+h$>$}\newline
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include "{}Async\+Task\+Lib.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{sketch_8ino_af61315e1c4a04436923a5c52196cdd3c}\label{sketch_8ino_af61315e1c4a04436923a5c52196cdd3c} 
+\#define {\bfseries REST}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{group__sketch_ga5d74787dedbc4e11c1ab15bf487e61f8}\label{group__sketch_ga5d74787dedbc4e11c1ab15bf487e61f8} 
+enum {\bfseries State} \{ \newline
+{\bfseries INIT} = 0
+, {\bfseries BLOQUEO} = 1
+, {\bfseries MONITOR\+\_\+\+LUZ} = 2
+, {\bfseries ALERTA} = 3
+, \newline
+{\bfseries MONITOR\+\_\+\+TEMP} = 4
+, {\bfseries ALARMA} = 5
+ \}
+\item 
+\Hypertarget{group__sketch_ga080a822f0093973313bd644e517a5090}\label{group__sketch_ga080a822f0093973313bd644e517a5090} 
+enum {\bfseries Input} \{ \newline
+{\bfseries CORRECTO} = 0
+, {\bfseries BLOQUEADO} = 1
+, {\bfseries TIME\+\_\+\+OUT} = 2
+, {\bfseries LUZ} = 3
+, \newline
+{\bfseries TEMP} = 4
+, {\bfseries Unknown} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{group__sketch_ga9e9cdeb62c75e16ac53f35529b9fc759}{Escribir}} ()
+\item 
+Liquid\+Crystal {\bfseries lcd} (12, 11, 5, 4, 3, 2)
+\item 
+void \mbox{\hyperlink{group__sketch_ga2c018b07f320da4371811bb498b61a82}{seguridad}} ()
+\item 
+Async\+Task {\bfseries async\+Task\+Seguridad} (0, \mbox{\hyperlink{group__sketch_ga2c018b07f320da4371811bb498b61a82}{seguridad}})
+\item 
+void \mbox{\hyperlink{group__sketch_gaae8cb957f1db9a84e5b89500d634fc09}{monitor\+Lu}} ()
+\item 
+Async\+Task {\bfseries async\+Task2\+Monitor\+Lu} (0, true, \mbox{\hyperlink{group__sketch_gaae8cb957f1db9a84e5b89500d634fc09}{monitor\+Lu}})
+\item 
+void \mbox{\hyperlink{group__sketch_ga33677be46e4716eacd91dd5bfcce7d14}{alerta}} ()
+\item 
+Async\+Task {\bfseries async\+Task3\+Alerta} (0, true, \mbox{\hyperlink{group__sketch_ga33677be46e4716eacd91dd5bfcce7d14}{alerta}})
+\item 
+void \mbox{\hyperlink{group__sketch_gae4a7a64a89cc76039ba0f4d7597e54a0}{temperatura}} ()
+\item 
+Async\+Task {\bfseries async\+Task4\+Temperatura} (500, true, \mbox{\hyperlink{group__sketch_gae4a7a64a89cc76039ba0f4d7597e54a0}{temperatura}})
+\item 
+void \mbox{\hyperlink{group__sketch_gad9ee76c563085f0c7551b4f5af30adf8}{alarma}} ()
+\item 
+Async\+Task {\bfseries async\+Task4\+Alarma} (0, true, \mbox{\hyperlink{group__sketch_gad9ee76c563085f0c7551b4f5af30adf8}{alarma}})
+\item 
+void \mbox{\hyperlink{group__sketch_gad35c525da6d7cf12e69e02798276e1bf}{timeout\+T3}} ()
+\item 
+Async\+Task {\bfseries async\+Task\+Time3} (3000, \mbox{\hyperlink{group__sketch_gad35c525da6d7cf12e69e02798276e1bf}{timeout\+T3}})
+\item 
+void \mbox{\hyperlink{group__sketch_ga4f5f1a1139f0bb4b3686af51a91119ae}{timeout\+T4}} ()
+\item 
+Async\+Task {\bfseries async\+Task\+Time4} (4000, \mbox{\hyperlink{group__sketch_ga4f5f1a1139f0bb4b3686af51a91119ae}{timeout\+T4}})
+\item 
+void \mbox{\hyperlink{group__sketch_ga18f26313c87ac04379d2d720d4ef4d71}{timeout\+T5}} ()
+\item 
+Async\+Task {\bfseries async\+Task\+Time5} (5000, \mbox{\hyperlink{group__sketch_ga18f26313c87ac04379d2d720d4ef4d71}{timeout\+T5}})
+\item 
+void \mbox{\hyperlink{group__sketch_gac3f4f7ace22c6985a2de01bcd0393da2}{timeout\+T6}} ()
+\item 
+Async\+Task {\bfseries async\+Task\+Time6} (6000, \mbox{\hyperlink{group__sketch_gac3f4f7ace22c6985a2de01bcd0393da2}{timeout\+T6}})
+\item 
+State\+Machine {\bfseries state\+Machine} (6, 9)
+\item 
+void {\bfseries setup} ()
+\item 
+void {\bfseries loop} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const String {\bfseries password} = "{}1805"{}
+\item 
+int {\bfseries attempts} = 0
+\item 
+int {\bfseries buzzer} = 7
+\item 
+int {\bfseries tempo} = 140
+\item 
+int {\bfseries wholenote} = (60000 \texorpdfstring{$\ast$}{*} 4) / tempo
+\item 
+int {\bfseries divider} = 0
+\item 
+int {\bfseries note\+Duration} = 0
+\item 
+int \mbox{\hyperlink{group__sketch_gaa7afc895bd611d7904ae7dab9cb3892f}{melodia}} \mbox{[}$\,$\mbox{]}
+\item 
+int {\bfseries notes} = sizeof(melodia) / sizeof(melodia\mbox{[}0\mbox{]}) / 2
+\item 
+char \mbox{\hyperlink{group__sketch_ga856e873a1d14012d57ddb813c4a1e40a}{keys}} \mbox{[}ROWS\mbox{]}\mbox{[}COLS\mbox{]}
+\item 
+Keypad {\bfseries keypad} = Keypad(make\+Keymap(keys), row\+Pins, col\+Pins, ROWS, COLS)
+\item 
+Input {\bfseries current\+Input}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ejecucion completa. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/11 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Maria Camila Hoyos Gomez Santiago Alexander Dorado Gomez 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Copyright}
+Information contained herein is proprietary to and constitutes valuable confidential trade secrets of Unicauca, and is subject to restrictions on use and disclosure.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Copyright (c) Unicauca 2023. All rights reserved.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The copyright notices above do not evidence any actual or intended publication of this material. 
+\end{DoxyParagraph}
